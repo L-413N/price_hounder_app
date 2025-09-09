@@ -135,7 +135,7 @@ async def parse_product(url: str, retry_count: int = 0) -> ProductInfo:
                 captcha_rate=FAILED_ATTEMPTS[url] / max(1, retry_count + 1)
             )
 
-    except Exception:
+    except Exception as e:
         logger.error(f"❌ Ошибка при парсинге {url} через {proxy['name']}: {e}")
         await asyncio.sleep(random.uniform(5, 8))
         return await parse_product(url, retry_count + 1)
