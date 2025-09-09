@@ -1,3 +1,4 @@
 requests
 playwright_stealth
 playwright
+pydantic
