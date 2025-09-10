@@ -2,3 +2,4 @@ requests
 playwright_stealth
 playwright
 pydantic
+python-dotenv
